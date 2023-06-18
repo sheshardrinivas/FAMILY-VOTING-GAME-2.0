@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" type="x-icon" href="Screenshot (3).png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAMILY VOTING GAME</title>
+</head>
+<body style="background-color: black;text-align: center;">
+  <h1 style="color:white ;border-width:4px; border: white;  font-family:  'Courier New', Courier, monospace;font-size: larger;">FAMILY VOTING GAME</h1>
+    <br>
+ <h2 style="color:white ;font-family: 'Courier New', Courier, monospace;font-size: small;">MAX VALUE</h2>
+    
+    <p id="maxv"class="bye"></p>   <input type="number" id="in">
+    <button class="hi"  onclick="set()">set</button>
+  
+
+    <br>
+    <br> 
+    <br>
+    <div>
+<img src="be475839adf2cca9995e3520ace2e6d4.jpg" style="height: 400px; width: 405px;"> <img src="tom-holland-reveals-once-being-told-he-would-get-spider-man-because-he-wasnt-good-looking-enough-001.jpg" style="height: 400px; width: 405px;">
+<br>
+
+<br>
+<div>
+
+
+    <button onclick="iron()" class="hi">Team Iron</button>  <button onclick="spider()"  class="hi">Team Spider</button >
+<style>
+.hi{
+background-color: black;
+color:white;
+
+
+}
+.bye{
+
+color: white;
+
+
+}
+
+
+
+</style>
+  </div>
+<div>
+<p id="i" class="bye"class="bye">0</p> <p class="bye" id="s">0</p>
+<br>
+<p id="wins"class="bye"></p>
+
+    </div>
+    </div>
+   <script>
+
+var maxvalue = 0;
+ var win_i="iron_man_wins";
+ var win_s="spider_man_wins";
+var team_i=0;
+var team_S=0;
+function  iron(){
+team_i=team_i+1;
+
+document.getElementById("i").innerHTML=team_i;
+if (team_i>maxvalue) {
+    document.getElementById("i").innerHTML=win_i; 
+    team_S=0;
+    window.alert("the voting a been stoped ,please refresh your page and restart your voting game.")
+  }
+
+
+}
+function  spider(){
+team_S=team_S+1;
+document.getElementById("s").innerHTML=team_S;
+if (team_S>maxvalue) {
+    document.getElementById("s").innerHTML=win_s; 
+    team_i=0;
+    window.alert("the voting a been stoped ,please refresh your page and restart your voting game.")
+  
+  }
+
+}
+
+function set(){
+maxvalue=document.getElementById("in").value;
+document.getElementById("maxv").innerHTML=maxvalue;
+
+
+}
+
+
+
+
+
+</script>
+</body>
+</html>
